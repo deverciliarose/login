@@ -87,7 +87,7 @@ router.post('/esqueci-senha', async(req, res)=>{
         })
 
 
-        const resetlink= `http://127.0.0.1:5000/resetar-senha.html?token=${token}`;
+        const resetlink= `https://login-6-1xua.onrender.com/resetar-senha.html?token=${token}`;
         await transporter.sendMail({
             from: 'testelog856@gmail.com',
             to: email,

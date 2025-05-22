@@ -11,7 +11,7 @@ const app = express();
 
 
 app.use(cors({
-    origin: 'http://127.0.0.1:5500',
+    origin: 'https://login-6-1xua.onrender.com',
     methods: ['GET', 'POST'],
     credentials: true
     
@@ -26,5 +26,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes)
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, ()=> console.log(`Servidor rodando na porta ${PORT}`))

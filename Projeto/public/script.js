@@ -21,7 +21,7 @@ if(cadastro){
        }
 
         try{
-            const res = await fetch('http://127.0.0.1:5000/cadastro',{
+            const res = await fetch('https://login-6-1xua.onrender.com/cadastro',{
                 method:'POST',
                 headers:{'Content-Type':'application/json'},
                 body: JSON.stringify({nome,email,senha}),
@@ -78,7 +78,7 @@ if(login){
 
 
         try{
-            const res = await fetch('http://127.0.0.1:5000/login',{
+            const res = await fetch('https://login-6-1xua.onrender.com/login',{
                 method: 'POST',
                 headers:{'Content-Type': 'application/json'},
                 body: JSON.stringify({email, senha})

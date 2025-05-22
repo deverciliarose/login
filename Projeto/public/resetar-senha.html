@@ -41,7 +41,7 @@
             return;
            }
 
-            const res = await fetch('http://127.0.0.1:5000/resetar-senha',{
+            const res = await fetch('https://login-6-1xua.onrender.com/resetar-senha',{
                 method:'POST',
                 headers: {'Content-Type':'application/json'},
                 body: JSON.stringify({token, novaSenha})
