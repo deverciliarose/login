@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+}
+
+.container{
+    display: block;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+    background: #2a5298;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    
+    
+}
+
+h2{
+    color: white;
+    margin-top: 50px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    font-variation-settings:
+    "wdth" 100;
+
+}
+input{
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    background-color: #5c84c7;
+    font-size: 18px;
+    color: white;
+}
+.input-icon{
+    position: relative;
+    margin-bottom: 15px;
+}
+.input-icon input{
+    padding: 10px 10px 10px 35px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+.input-icon .material-symbols-outlined{
+    position: absolute;
+    top: 55%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 25px;
+   
+
+}
+button{
+    padding: 7px;
+    background-color: #5c84c7;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+p{
+    color: white;
+    margin-top: -15px;
+    font-size: 15px;
+}
+p a{
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+}
+p a:hover{
+    color: aqua;
+}
+.adicionar{
+    margin-top: 5px;
+}
+/* Css da página de cadastro */
+h1{
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    font-variation-settings:
+    "wdth" 100;
+}
+.cadastre-se{
+    display: block;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+    background: #2a5298;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+     
+}
+.log{
+    margin-top: 1px;
+}
+.log1:hover{
+    color: aqua;
+}
+/*Css da página de email de recuperação*/
+.nova-senha{
+    display: block;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+    background: #2a5298;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+label{
+    color: white;
+}
+.aviso{
+    margin-left: 10px;
+    font-size: 12px;
+}
+/*Css da página de redefinição de senha*/
+.redefinirSenha{
+    display: block;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+    background: #2a5298;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 8px; 
+}
+.inst-redef{
+    color: white;
+    margin-top: 80px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    font-variation-settings:
+    "wdth" 100;
+}
+#reenviarEmail{
+    color: black;
+    margin-left: 70px;
+}
+#reenviarEmail:hover{
+    color: aqua;
+}
+
+  
+  .toggle-password {
+    position: absolute;
+    top: 50%;
+    margin-left: 220px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    
+    .container,
+    .cadastre-se,
+    .nova-senha,
+    .redefinirSenha {
+      width: 90%;
+      margin: 50px auto;
+      margin-top: 80px;
+      height: auto;
+    }
+  
+    form {
+      padding: 15px;
+    }
+  
+    h1, h2, .inst-redef {
+      font-size: 20px;
+      margin-top: 30px;
+    }
+  
+    .toggle-password {
+      margin-left: 85%;
+      font-size: 20px;
+    }
+  
+    #reenviarEmail {
+      margin-left: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    
+    .container,
+    .cadastre-se,
+    .nova-senha,
+    .redefinirSenha {
+      width: 95%;
+      margin: 30px auto;
+      margin-top: 80px;
+    }
+  
+    input, button {
+      font-size: 16px;
+    }
+  
+    .input-icon .material-symbols-outlined {
+      font-size: 20px;
+      left: 8px;
+    }
+  
+    .toggle-password {
+      font-size: 18px;
+      margin-left: 80%;
+    }
+  }
+  

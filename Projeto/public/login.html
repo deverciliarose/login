@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de login</title>
+    <link rel="stylesheet" href="Principal.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" />
+
+</head>
+<body>
+    <div class="container">
+    <form id="login">
+        <h2>Login</h2>
+        <div class="input-icon">
+            <span class="material-symbols-outlined">
+                mail
+                </span>
+            <input type="email"  id="Email" placeholder="Email" required>
+        </div>
+        
+        <div class="input-icon">
+            <span class="material-symbols-outlined">
+                password
+                </span>
+            <input type="password"  id="Senha" placeholder="Senha" required>
+            <span class="material-symbols-outlined toggle-password" id="toggleSenha">visibility_off</span>
+        </div>
+        <p><a href="esqueci-senha.html">Esqueci minha senha</a></p>
+        
+        <button type="submit">Login</button>
+        <p class="adicionar">Não tem conta?<a href="cadastro.html">Cadastre-se</a></p>
+    </form>
+    
+    </div>
+   
+
+    <script src="script.js"></script>
+</body>
+</html>

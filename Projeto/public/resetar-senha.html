@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar senha</title>
+    <link rel="stylesheet" href="Principal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="redefinirSenha">
+        <form id="restaurarSenha">
+            <h1 class="inst-redef">Redefinir senha</h1>
+            <div class="input-icon">
+                <span class="material-symbols-outlined">
+                    password
+                    </span>
+                <input type="password"  id="novaSenha" placeholder="Nova senha" required>
+                <span class="material-symbols-outlined toggle-password" id="toggleSenha">visibility_off</span>
+            </div>
+            <button type="submit">Redefinir</button>
+          </form>
+    </div>
+    
+
+    <script>
+        const form = document.getElementById('restaurarSenha')
+        const token = new URLSearchParams(window.location.search).get('token')
+
+
+        form.addEventListener('submit', async (e)=>{
+            e.preventDefault()
+            const novaSenhaInput = document.getElementById('novaSenha')
+            const novaSenha = novaSenhaInput.value
+
+            const regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+
+           if (!regex.test(novaSenha)) {
+            alert('A senha deve conter no mínimo 8 caracteres, incluindo uma letra maiúscula, uma minúscula e um número.');
+            return;
+           }
+
+            const res = await fetch('http://127.0.0.1:5000/resetar-senha',{
+                method:'POST',
+                headers: {'Content-Type':'application/json'},
+                body: JSON.stringify({token, novaSenha})
+            })
+
+            const data = await res.json();
+            alert(data.message)
+
+
+            novaSenhaInput.value = ''
+
+            if(res.status ===200){
+                window.location.href ='login.html'
+            }
+        });
+
+const novaSenhaInput = document.getElementById('novaSenha');
+const senhaToggle = document.getElementById('toggleSenha');
+
+if (novaSenhaInput && senhaToggle) {
+  senhaToggle.addEventListener('click', () => {
+    const tipoAtual = novaSenhaInput.getAttribute('type');
+
+    if (tipoAtual === 'password') {
+      novaSenhaInput.setAttribute('type', 'text');
+      senhaToggle.textContent = 'visibility';
+    } else {
+      novaSenhaInput.setAttribute('type', 'password');
+      senhaToggle.textContent = 'visibility_off';
+    }
+  });
+}
+
+
+        
+    </script>
+</body>
+</html>

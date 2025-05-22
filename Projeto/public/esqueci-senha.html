@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esqueci senha</title>
+    <link rel="stylesheet" href="Principal.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
+</head>
+<body>
+    <div class="nova-senha">
+        <form id="esqueciSenha">
+            <h1>E-mail de recuperação</h1>
+            <label>Digite o email cadastro</label>
+            <div class="input-icon">
+                <span class="material-symbols-outlined">
+                    mail
+                    </span>
+                <input type="email"  id="email" placeholder="Digite seu e-mail" required>
+            </div>
+         <button type="submit">Enviar</button>
+        </form>
+        <p class="aviso">
+            <a href="#" id="reenviarEmail">Reenviar e-mail</a>
+            <br>
+            <br>
+            O e-mail pode levar até 30 segundos para chegar. Caso não encontre, verifique a sua caixa de spam.
+          </p>
+        
+    </div>
+    
+
+    <script>
+        document.getElementById('esqueciSenha').addEventListener('submit', async(e)=>{
+            e.preventDefault()
+
+            const emailInput = document.getElementById('email')
+            const email = emailInput.value
+
+            if (!email) {
+            alert("Por favor, digite o e-mail antes de reenviar.");
+            return;
+        }
+
+
+            const res = await fetch('http://127.0.0.1:5000/esqueci-senha',{
+                method:'POST',
+                headers:{'Content-Type':'application/json'},
+                body: JSON.stringify({email})
+            })
+            const data = await res.json()
+            alert(data.message)
+
+            emailInput.value = '';
+        })
+    </script>
+</body>
+</html>
