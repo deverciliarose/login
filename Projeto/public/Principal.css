@@ -217,9 +217,8 @@ label{
     }
   
     #reenviarEmail {
-      margin-top: 20px;
-      display: block;
-      align-items: center;
+      margin-top: 10px;
+      
     }
   }
   
@@ -251,8 +250,7 @@ label{
   
     #reenviarEmail {
       margin-top: 15px;
-      display: block;
-      align-items: center;
+      
     }
   }
   
