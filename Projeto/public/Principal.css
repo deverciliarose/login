@@ -211,7 +211,12 @@ label{
     }
   
     #reenviarEmail {
-      margin-left: 10px;
+      margin-top: 10px;
+      align-items: center;
+    }
+    .toggle-password {
+      margin-right: 5px;
+     
     }
   }
   
@@ -238,6 +243,10 @@ label{
     .toggle-password {
       font-size: 18px;
       margin-left: 80%;
+    }
+    .toggle-password {
+      margin-right: 5px;
+     
     }
   }
   

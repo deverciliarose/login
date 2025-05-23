@@ -31,7 +31,7 @@ if(cadastro){
             alert(data.message)
 
             if(res.status ===201){
-                window.location.href = 'login.html'
+                window.location.href = 'index.html'
             }
 
             nomeInput.value = ''
